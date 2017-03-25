@@ -1,0 +1,42 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[MSR36-20 MSR36-20_2]]
+        image = E:\HCL
+        device_id = 2
+        bridge_mac = 68-f4-47-72-02-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_1 GE_0/0
+        x = -332.0
+        y = -158.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_1]]
+        image = E:\HCL
+        device_id = 1
+        bridge_mac = 68-db-db-82-01-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/0
+        x = 36.0
+        y = -161.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "SSH目标机\nIP:10.0.0.2 24"
+        x = -3.0
+        y = -230.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "ssh2 10.0.0.2"
+        x = -373.0
+        y = -34.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "SSH跳板\nIP:10.0.0.1 24"
+        x = -357.0
+        y = -244.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

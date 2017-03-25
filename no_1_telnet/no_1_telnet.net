@@ -1,0 +1,56 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[MSR36-20 MSR36-20_2]]
+        image = E:\HCL
+        device_id = 2
+        bridge_mac = 68-ca-4c-53-02-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_1 GE_0/0
+        x = -226.0
+        y = -167.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_1]]
+        image = E:\HCL
+        device_id = 1
+        bridge_mac = 68-ca-41-f6-01-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/0
+        x = 52.0
+        y = -169.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "<H3C>system-view\n[H3C]interface GigabitEthernet 0/0\n[H3C-GigabitEthernet0/0]ip address  10.0.0.2 24\n[H3C-GigabitEthernet0/0]quit\n[H3C]telnet server enable\n[H3C]user-interface vty 0 4\n\n####password验证方式[只有用户名的方式]\n[H3C-line-vty0-4]authentication-mode password\n[H3C-line-vty0-4]set authentication password simple 123\n##user pri  优先级配不上去\n\n##scheme验证方式[用户名+密码的方式]！！！标准配置，记住\n[H3C-line-vty0-4]authentication-mode scheme\n[H3C-luser-manage-tangqing]password simple 321\n[H3C-luser-manage-tangqing]service-type telnet"
+        x = -217.0
+        y = -71.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "telnet 登陆跳板\nIP:10.0.0.1 24"
+        x = -271.0
+        y = -228.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "telnet目的设备\nIP:10.0.0.2 24"
+        x = 8.0
+        y = -231.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = -66.9989648971
+        y = 25.2877623374
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = 64.9989648971
+        y = 24.7122376626
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

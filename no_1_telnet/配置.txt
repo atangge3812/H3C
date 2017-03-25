@@ -1,0 +1,16 @@
+<H3C>system-view
+[H3C]interface GigabitEthernet 0/0
+[H3C-GigabitEthernet0/0]ip address  10.0.0.2 24
+[H3C-GigabitEthernet0/0]quit
+[H3C]telnet server enable
+[H3C]user-interface vty 0 4
+
+####password验证方式[只有用户名的方式]
+[H3C-line-vty0-4]authentication-mode password
+[H3C-line-vty0-4]set authentication password simple 123
+##user pri  优先级配不上去
+
+##scheme验证方式[用户名+密码的方式]！！！标准配置，记住
+[H3C-line-vty0-4]authentication-mode scheme
+[H3C-luser-manage-tangqing]password simple 321
+[H3C-luser-manage-tangqing]service-type telnet

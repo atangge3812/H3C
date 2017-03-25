@@ -1,0 +1,74 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[MSR36-20 MSR36-20_3]]
+        image = E:\HCL
+        device_id = 3
+        bridge_mac = a0-c6-df-70-03-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/1
+        x = 111.0
+        y = -240.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        image = E:\HCL
+        device_id = 2
+        bridge_mac = a0-c6-db-b7-02-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_1 GE_0/0
+        GE_0/1 = MSR36-20_3 GE_0/0
+        x = -177.0
+        y = -244.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_1]]
+        image = E:\HCL
+        device_id = 1
+        bridge_mac = a0-c6-d8-2d-01-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/0
+        x = -396.0
+        y = -244.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "20.0.0.0"
+        x = -66.0
+        y = -183.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.0.0.0"
+        x = -332.0
+        y = -161.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = -66.9961425334
+        y = 24.4444980204
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 64.9961425334
+        y = 25.5555019796
+        interface = MSR36-20_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -67.0
+        y = 25.0
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,62 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_1]]
+        image = E:\HCL
+        device_id = 1
+        bridge_mac = 6a-58-0e-6b-01-00
+        slot0 = S5800
+        GE_0/1 = MSR36-20_2 GE_0/0
+        GE_0/2 = MSR36-20_3 GE_0/0
+        GE_0/3 = MSR36-20_4 GE_0/0
+        x = -5.0
+        y = -80.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        image = E:\HCL
+        device_id = 2
+        bridge_mac = 6a-58-2d-e4-02-00
+        slot0 = MSR36
+        GE_0/0 = S5820V2-54QS-GE_1 GE_0/1
+        x = -241.0
+        y = -155.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_3]]
+        image = E:\HCL
+        device_id = 3
+        bridge_mac = 6a-58-32-5c-03-00
+        slot0 = MSR36
+        GE_0/0 = S5820V2-54QS-GE_1 GE_0/2
+        x = -252.0
+        y = 25.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_4]]
+        image = E:\HCL
+        device_id = 4
+        bridge_mac = 6a-58-37-41-04-00
+        slot0 = MSR36
+        GE_0/0 = S5820V2-54QS-GE_1 GE_0/3
+        x = 222.0
+        y = -91.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "10.0.0.3\nvlan:30"
+        x = 196.0
+        y = -174.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.0.0.2\nvlan:20"
+        x = -287.0
+        y = 118.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "10.0.0.1\nvlan:10"
+        x = -282.0
+        y = -231.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

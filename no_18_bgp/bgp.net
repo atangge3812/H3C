@@ -1,0 +1,50 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[MSR36-20 MSR36-20_3]]
+        image = E:\HCL
+        device_id = 3
+        bridge_mac = 9c-e8-36-75-03-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/1
+        GE_0/1 = MSR36-20_4 GE_0/0
+        x = 57.0
+        y = -162.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        image = E:\HCL
+        device_id = 2
+        bridge_mac = 9c-e8-31-00-02-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_1 GE_0/0
+        GE_0/1 = MSR36-20_3 GE_0/0
+        x = -122.0
+        y = -41.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_1]]
+        image = E:\HCL
+        device_id = 1
+        bridge_mac = 9c-e8-29-ba-01-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/0
+        x = -374.0
+        y = -37.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_4]]
+        image = E:\HCL
+        device_id = 4
+        bridge_mac = 9c-e8-3c-06-04-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_3 GE_0/1
+        x = 170.0
+        y = -39.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "[H3C-bgp-ipv4]peer 4.4.4.4 next-hop-local"
+        x = -210.0
+        y = 56.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

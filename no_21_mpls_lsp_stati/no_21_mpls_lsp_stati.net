@@ -1,0 +1,118 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[MSR36-20 MSR36-20_2]]
+        image = C:\HCL
+        device_id = 2
+        bridge_mac = 1e-52-38-e6-02-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_1 GE_0/1
+        GE_0/1 = MSR36-20_4 GE_0/0
+        x = -23.0
+        y = -102.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_1]]
+        image = C:\HCL
+        device_id = 1
+        bridge_mac = 1e-52-31-85-01-00
+        slot0 = MSR36
+        GE_0/1 = MSR36-20_2 GE_0/0
+        x = -373.0
+        y = -104.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_4]]
+        image = C:\HCL
+        device_id = 4
+        bridge_mac = 1e-52-43-d2-04-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/1
+        x = 321.0
+        y = -102.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "loopback\n3.3.3.9"
+        x = 289.0
+        y = -196.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "loopback\n1.1.1.9"
+        x = -414.0
+        y = -170.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "out:111"
+        x = -388.0
+        y = -26.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "in:111 out:112"
+        x = -58.0
+        y = -25.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "in:121 out:122"
+        x = -61.0
+        y = 16.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "in:122"
+        x = -391.0
+        y = 14.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "in:112 out:null"
+        x = 290.0
+        y = -27.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "out:121"
+        x = 301.0
+        y = 21.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "此例子手工建立LSP关系，实现2台PE间的互相通信，抓包发现确实带上了标签！"
+        x = -393.0
+        y = -421.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "10.0.0.0"
+        x = -242.0
+        y = -121.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "20.0.0.0"
+        x = 118.0
+        y = -123.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -407.0
+        y = 14.0
+        width = 852.0
+        height = 38.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -408.0
+        y = -29.0
+        width = 853.0
+        height = 38.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

@@ -1,0 +1,146 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[MSR36-20 MSR36-20_3]]
+        image = E:\HCL
+        device_id = 3
+        bridge_mac = 74-36-b7-df-03-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/1
+        GE_0/1 = MSR36-20_4 GE_0/0
+        x = 174.0
+        y = -50.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        image = E:\HCL
+        device_id = 2
+        bridge_mac = 74-36-b3-af-02-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_1 GE_0/0
+        GE_0/1 = MSR36-20_3 GE_0/0
+        x = -123.0
+        y = -47.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_1]]
+        image = E:\HCL
+        device_id = 1
+        bridge_mac = 74-36-9c-9b-01-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_2 GE_0/0
+        x = -405.0
+        y = -47.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_4]]
+        image = E:\HCL
+        device_id = 4
+        bridge_mac = 74-36-bc-4a-04-00
+        slot0 = MSR36
+        GE_0/0 = MSR36-20_3 GE_0/1
+        x = 406.0
+        y = -50.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "[H3C]ospf\n[H3C-ospf-1]area 1\n[H3C-ospf-1-area-0.0.0.1]network 30.0.0.0 0.0.0.255\n[H3C]interface LoopBack 1\n[H3C-LoopBack1]ip add 4.4.4.4 32 ##环回地址必须子网掩码是32的！！！\n[H3C-ospf-1-area-0.0.0.1]network 4.4.4.4 0.0.0.0 ##新加地址段后，必须在area里面发布，不然不通！！！"
+        x = 341.0
+        y = 159.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "[H3C-ospf-1]area 0\n[H3C-ospf-1-area-0.0.0.0]network 10.0.0.0 0.0.0.255\n[H3C-ospf-1-area-0.0.0.0]area 1\n[H3C-ospf-1-area-0.0.0.1]network 20.0.0.0 0.0.0.255\n[H3C-ospf-1-area-0.0.0.1]display ip routing-table"
+        x = -279.0
+        y = 157.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "loopback:4.4.4.4"
+        x = 344.0
+        y = 46.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "loopback:3.3.3.3"
+        x = 121.0
+        y = 62.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "loopback:2.2.2.2"
+        x = -142.0
+        y = 64.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "loopback:1.1.1.1"
+        x = -424.0
+        y = 76.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "area1"
+        x = 164.0
+        y = -164.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "area0"
+        x = -299.0
+        y = -167.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "20.0.0.1"
+        x = -74.0
+        y = -101.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "20.0.0.2"
+        x = 110.0
+        y = -109.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "10.0.0.1"
+        x = -380.0
+        y = -98.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "10.0.0.2"
+        x = -182.0
+        y = -101.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "30.0.0.1"
+        x = 207.0
+        y = -108.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "30.0.0.2"
+        x = 366.0
+        y = -107.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -88.0
+        y = -118.0
+        width = 538.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -459.0
+        y = -127.0
+        width = 367.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

@@ -1,0 +1,15 @@
+system-view
+int range GigabitEthernet 1/0/1 to GigabitEthernet 1/0/3
+port link-type trunk
+port trunk  permit vlan all
+quit
+vlan 10
+vlan 20
+vlan 30
+quit
+stp region-configuration
+region-name h3c
+instance 1 vlan 10
+instance 2 vlan 20
+instance 3 vlan 30
+active region-configuration

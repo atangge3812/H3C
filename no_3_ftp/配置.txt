@@ -1,0 +1,11 @@
+<H3C>system-view
+[H3C]interface  GigabitEthernet 0/0
+[H3C-GigabitEthernet0/0]ip address 10.0.0.2 24
+[H3C-GigabitEthernet0/0]quit
+[H3C]ssh server enable
+[H3C-line-vty0-4]authentication-mode scheme
+[H3C-line-vty0-4]protocol inbound ssh
+[H3C]local-user tangqing
+[H3C-luser-manage-tangqing]password  simple  321
+[H3C-luser-manage-tangqing]service-type ssh
+##貌似SSH无法使用password方式登录

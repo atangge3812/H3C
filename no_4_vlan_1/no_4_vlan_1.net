@@ -1,0 +1,158 @@
+autostart = False
+version = 7.1.59
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 20000
+    [[MSR36-20 MSR36-20_3]]
+        image = E:\HCL
+        device_id = 3
+        bridge_mac = 6a-3c-40-21-03-00
+        slot0 = MSR36
+        GE_0/0 = S5820V2-54QS-GE_1 GE_0/2
+        x = -347.0
+        y = -192.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_6]]
+        image = E:\HCL
+        device_id = 6
+        bridge_mac = 6a-3c-4f-5c-06-00
+        slot0 = MSR36
+        GE_0/0 = S5820V2-54QS-GE_2 GE_0/2
+        x = 202.0
+        y = -213.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_5]]
+        image = E:\HCL
+        device_id = 5
+        bridge_mac = 6a-3c-49-aa-05-00
+        slot0 = MSR36
+        GE_0/0 = S5820V2-54QS-GE_2 GE_0/3
+        x = 214.0
+        y = 25.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_4]]
+        image = E:\HCL
+        device_id = 4
+        bridge_mac = 6a-3c-45-1a-04-00
+        slot0 = MSR36
+        GE_0/0 = S5820V2-54QS-GE_1 GE_0/3
+        x = -347.0
+        y = 30.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_1]]
+        image = E:\HCL
+        device_id = 1
+        bridge_mac = 6a-3c-1e-82-01-00
+        slot0 = S5800
+        GE_0/1 = S5820V2-54QS-GE_2 GE_0/1
+        GE_0/2 = MSR36-20_3 GE_0/0
+        GE_0/3 = MSR36-20_4 GE_0/0
+        x = -173.0
+        y = -93.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        image = E:\HCL
+        device_id = 2
+        bridge_mac = 6a-3c-23-83-02-00
+        slot0 = S5800
+        GE_0/1 = S5820V2-54QS-GE_1 GE_0/1
+        GE_0/2 = MSR36-20_6 GE_0/0
+        GE_0/3 = MSR36-20_5 GE_0/0
+        x = 57.0
+        y = -90.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "IP:10.0.0.4 24\nvlan:20"
+        x = 186.0
+        y = 110.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "IP:10.0.0.3 24\nvlan:20"
+        x = -372.0
+        y = 110.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "IP:10.0.0.2 24\nvlan:10"
+        x = 164.0
+        y = -272.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "IP:10.0.0.1 24\nvlan:10"
+        x = -364.0
+        y = -256.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -56.8823967173
+        y = 51.5902682654
+        interface = MSR36-20_6 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -52.3427790173
+        y = -29.0
+        interface = MSR36-20_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = 56.3399071636
+        y = 0.144211559918
+        interface = MSR36-20_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = 58.9199321602
+        y = 46.1999576001
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/3"
+        x = 50.3427790173
+        y = 55.9474320692
+        interface = S5820V2-54QS-GE_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        x = 54.8823967173
+        y = -29.0
+        interface = S5820V2-54QS-GE_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = -66.9865138229
+        y = 26.0386107486
+        interface = S5820V2-54QS-GE_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/3"
+        x = -96.3399071636
+        y = 37.8557884401
+        interface = S5820V2-54QS-GE_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/2"
+        x = -89.9199321602
+        y = -12.1999576001
+        interface = S5820V2-54QS-GE_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/1"
+        x = 64.9865138229
+        y = 23.9613892514
+        interface = S5820V2-54QS-GE_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
